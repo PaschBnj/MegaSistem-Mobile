@@ -125,6 +125,18 @@
           opacity: 0;
         }
       }
+
+      @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+      100% {
+        transform: translateY(0); 
+      }
+    }
       #cabeçalho {
         display: flex;
         position: fixed;
@@ -205,6 +217,7 @@
         filter: brightness(40%);
         filter: saturate(120%);
         filter: contrast(150%);
+        animation: float 4s ease-in-out infinite;
       }
 
       #primeirotitulo {
@@ -537,6 +550,7 @@
     section.scrollIntoView({ behavior: "smooth" });
   }
 </script>
+
 
 
 
