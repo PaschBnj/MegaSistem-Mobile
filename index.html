@@ -160,23 +160,24 @@
         transform: translateY(0); 
       }
     }
-      #cabeçalho {
-        display: flex;
-        position: fixed;
-        z-index: 999;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 20px;
-        height: 35px;
-        width: 85%;
-        background: #ffffff34;
-        border-bottom: 5px solid rgba(255, 0, 0, 0.548);
-        border-radius: 64px;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-top: 5px;
-        backdrop-filter: blur(10px);
-      }
+     #cabeçalho {
+      display: flex;
+      position: fixed;
+      z-index: 999;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      height: 55px;
+      background: #ffffff34;
+      border-bottom: 5px solid rgba(255, 0, 0, 0.548);
+      border-radius: 64px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 5px;
+      backdrop-filter: blur(10px);
+      width: calc(100% - 20px); 
+      box-sizing: border-box; 
+     }
 
       #LogoHeader {
         position: relative;
@@ -193,7 +194,7 @@
         height: auto;
         font-size: small;
       }
-      
+
       .header-left {
         display: flex;
         align-items: center;
@@ -201,8 +202,6 @@
       }
 
       .header-right {
-        position: relative;
-        left: 1px;
         display: flex;
         gap: 15px;
         height: auto;
@@ -210,10 +209,6 @@
       }
 
       .headerbutton {
-        position: absolute;
-        margin-right: 20px;
-        left: -40px;
-        top: -18px;
         background-color: rgba(255, 255, 255, 0.271);
         border: 2px solid white;
         border-radius: 32px;
@@ -228,8 +223,10 @@
         color: #1b0573;
       }
 
+
       #conteudo {
         display: flex;
+        width: 100%;
       }
 
       #WayChef {
@@ -412,17 +409,19 @@
         font-weight: 400;
         font-style: normal;
         top: 1940px;
-        left: 20px;
+        left: 10px;
         font-size: 310%;
         text-align: right;
       }
 
       #quartotitulo {
         position: absolute;
-        left: 260px;
-        top: 175px;
+        left: 50px;
+        top: 10px;
         font-family: "Bebas Neue", sans-serif;
-        font-size: 400%;
+        font-size: 200%;
+        
+        text-align: center;
       }
 
       #PedaçoPizza{
@@ -461,15 +460,24 @@
       #ContatoPage {
         position: absolute;
         top: 2200px;
+        
+
       }
 
       .infos {
         position: relative;
         display: flex;
-        justify-content: space-between;
         flex-direction: column;
-        background-color: rgb(0, 0, 29);
-        top: 150px;
+        justify-content: space-between;
+        top: 140px;
+        text-align: center;
+        font-size: small;
+        height: 40px;
+        width: 100%;
+        padding: 0%;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0%;
       }
       
       .section2 {
@@ -485,9 +493,7 @@
         position: absolute;
         background-color: rgb(0, 0, 29);
         top: 2400px;
-        left: -100px;
-        padding-left: 1000px;
-        padding-right: 2000px;
+        width: 100%;
         padding-bottom: 180px;
       }
     </style>
@@ -573,10 +579,10 @@
        <h2 id="terceirotitulo2"">CLIQUE NAS <br>IMAGENS E CONHEÇA-OS!</h2>
     </section>
     <section class="section4" id="ContatoPage">
-      <h1 id="quartotitulo">Quer saber mais? <br> Entre em contato <br> conosco!</h1>
+      <h1 id="quartotitulo">Quer saber mais? <br> Entre em contato conosco!</h1>
       <conteinter id="infos"></div>
         <h2 class="infos" id="endereço">📍Nosso endereço</h2>
-        <p class="infos">Rua Marechal Deodoro da Fonseca, 1735 <br>Parque Industrial - São Jose do Rio Preto, SP <br>CEP: 15025-070</p>
+        <p class="infos">Rua Marechal Deodoro da Fonseca, <br>1735 Parque Industrial <br>- São Jose do Rio Preto, SP <br>CEP: 15025-070</p>
         <h2 class="infos" id="telefones">📞Telefones de contato</h2>
         <p class="infos">Fixo: (17) 3212-2300<br>WhatsApp: (17) 99623-7020<br>Celular: (17) 99791-0201</p>
         <h2 class="infos" id="email">✉️Nosso E-mail</h2>
@@ -600,3 +606,5 @@
     section.scrollIntoView({ behavior: "smooth" });
   }
 </script>
+
+
